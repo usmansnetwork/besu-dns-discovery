@@ -97,9 +97,6 @@ jreleaser {
                 name = "Usmans Network (Manager Bot)"
                 email = 'gh-bot@usmans.net'
             }
-            prerelease {
-                enabled = true
-            }
         }
     }
     signing {
