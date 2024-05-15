@@ -7,7 +7,7 @@ plugins {
 }
 
 // TODO: Automate versioning using grgit or similar
-version = "2.5.1-pre"
+version = "2.5.1-SNAPSHOT"
 
 repositories {
     // Use Maven Central for resolving dependencies.
