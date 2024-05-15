@@ -29,5 +29,7 @@ bcprov-jdk15on = { module = "org.bouncycastle:bcprov-jdk15on", version.ref = "bo
 [bundles]
 tuweni = ["tuweni-bytes", "tuweni-concurrent", "tuweni-concurrent-coroutines", "tuweni-crypto", "tuweni-devp2p", "tuweni-io", "tuweni-kv", "tuweni-merkle-trie", "tuweni-rlp"]
 vertx = ["vertx-core", "vertx-lang-kotlin", "vertx-lang-kotlin-coroutines"]
+
 [plugins]
 jvm = { id = "org.jetbrains.kotlin.jvm", version = "1.9.22" }
+jreleaser = {id = "org.jreleaser", version = "1.12.0"}
