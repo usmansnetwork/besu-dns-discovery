@@ -7,7 +7,7 @@ plugins {
 }
 
 // TODO: Automate versioning using grgit or similar
-version = "2.5.1"
+version = "2.5.1-pre"
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -47,6 +47,7 @@ java {
     sourceCompatibility = JavaVersion.VERSION_21
     withJavadocJar()
     withSourcesJar()
+    group = 'info.usmans.tools'
 }
 
 publishing {
@@ -92,6 +93,18 @@ publishing {
 }
 
 jreleaser {
+    release {
+        github {
+            username = 'unet-bot'
+            commitAuthor {
+                name = "Usmans Network (Manager Bot)"
+                email = 'gh-bot@usmans.net'
+            }
+            prerelease {
+                enabled = true
+            }
+        }
+    }
     signing {
         active = 'ALWAYS'
         armored = true
