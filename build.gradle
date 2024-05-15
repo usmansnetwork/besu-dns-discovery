@@ -6,9 +6,6 @@ plugins {
     id 'maven-publish'
 }
 
-// TODO: Automate versioning using grgit or similar
-version = "2.5.1-SNAPSHOT"
-
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
