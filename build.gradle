@@ -44,6 +44,7 @@ java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(21)
     }
+    sourceCompatibility = JavaVersion.VERSION_21
     withJavadocJar()
     withSourcesJar()
 }
@@ -53,7 +54,8 @@ publishing {
         maven(MavenPublication) {
             groupId = 'info.usmans.tools'
             artifactId = 'besu-dns-discovery'
-
+            version = project.version
+            
             from components.java
 
             pom {
