@@ -55,7 +55,7 @@ publishing {
             groupId = 'info.usmans.tools'
             artifactId = 'besu-dns-discovery'
             version = project.version
-            
+
             from components.java
 
             pom {
@@ -87,6 +87,24 @@ publishing {
     repositories {
         maven {
             url = layout.buildDirectory.dir('staging-deploy')
+        }
+    }
+}
+
+jreleaser {
+    signing {
+        active = 'ALWAYS'
+        armored = true
+    }
+    deploy {
+        maven {
+            mavenCentral {
+                sonatype {
+                    active = 'ALWAYS'
+                    url = 'https://central.sonatype.com/api/v1/publisher'
+                    stagingRepository('target/staging-deploy')
+                }
+            }
         }
     }
 }
